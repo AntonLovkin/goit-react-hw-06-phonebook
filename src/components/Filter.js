@@ -10,7 +10,7 @@ const Filter = ({ value, onChange }) => (
 );
 
 const mapStateToProps = (state) => ({
-  value: state.phonebook.filter,
+  value: state.contacts.filter,
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -26,8 +26,8 @@ const getFilteredContacts = (allContacts, filter) => {
   );
 };
 
-const mapStateToProps = ({ phonebook: { contacts, filter } }) => ({
-  filteredContacts: getFilteredContacts(contacts, filter),
+const mapStateToProps = ({ contacts: { items, filter } }) => ({
+  filteredContacts: getFilteredContacts(items, filter),
 });
 
 const mapDispatchToProps = (dispatch) => ({
