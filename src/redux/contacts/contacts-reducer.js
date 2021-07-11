@@ -16,8 +16,9 @@ const items = createReducer(([] = names), {
   [actions.addContact]: (state, { payload }) => {
     if (state.map(({ name }) => name).includes(payload.name)) {
       alert(`${payload.name} is already in contacts`);
+    } else {
+      return [payload, ...state];
     }
-    return [payload, ...state];
   },
 
   [actions.deleteContact]: (state, { payload }) =>
