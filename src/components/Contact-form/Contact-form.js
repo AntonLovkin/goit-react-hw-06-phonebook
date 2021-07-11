@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import contactsActions from "../../redux/contacts/contacts-actions";
-// import './TodoList.css';
+import "../base.css";
+import "../Contact-form/contact-form.css";
 
 class ContactForm extends Component {
   state = {
@@ -33,10 +34,11 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
+      <form className="contacts-form" onSubmit={this.handleSubmit}>
+        <label className="label">
           Name
           <input
+            className="input"
             value={this.state.name}
             onChange={this.handleChange}
             placeholder="Name"
@@ -48,9 +50,10 @@ class ContactForm extends Component {
           />
         </label>
 
-        <label>
+        <label className="label">
           Number
           <input
+            className="input"
             value={this.state.number}
             onChange={this.handleChange}
             type="tel"
@@ -62,7 +65,9 @@ class ContactForm extends Component {
           />
         </label>
 
-        <button type="submit">Add contact</button>
+        <button className="button add" type="submit">
+          Add contact
+        </button>
       </form>
     );
   }

@@ -1,15 +1,20 @@
 import React from "react";
 import { connect } from "react-redux";
 import contactsActions from "../../redux/contacts/contacts-actions";
+import "./contacts-list.css";
 
 const ContactsList = ({ filteredContacts, onDeleteContact }) => (
-  <ul>
+  <ul className="contact-list">
     {filteredContacts.map(({ name, number, id }) => (
-      <li key={id} className="TodoList__item">
-        <p>
-          {name} : {number}
-        </p>
-        <button onClick={() => onDeleteContact(id)}>Удалить</button>
+      <li key={id} className="contact-item">
+        <span className="contact-name">{name} : </span>
+        <span className="contact-number"> {number}</span>
+        <button
+          className="button contact-item__button"
+          onClick={() => onDeleteContact(id)}
+        >
+          Удалить
+        </button>
       </li>
     ))}
   </ul>
