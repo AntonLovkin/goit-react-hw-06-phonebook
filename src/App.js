@@ -3,7 +3,7 @@ import ContactsList from "./components/Contacts/Contacts-list";
 import ContactForm from "./components/Contact-form/Contact-form";
 
 const App = () => (
-  <div>
+  <>
     <h1>Phonebook</h1>
     <ContactForm />
 
@@ -11,7 +11,7 @@ const App = () => (
     <Filter />
 
     <ContactsList />
-  </div>
+  </>
 );
 
 export default App;
